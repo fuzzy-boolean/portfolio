@@ -33,7 +33,8 @@ nav {
 blockquote {
     text-align: center;
     color: rgb(122, 0, 75);
-    padding: 1rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
     border-radius: 5px;
     display: grid;
 }
@@ -60,6 +61,8 @@ button {
     color: rgb(235, 225, 225);
     font-weight: 500;
     margin-right: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 button:hover {
