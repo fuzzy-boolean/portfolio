@@ -34,9 +34,6 @@ blockquote {
     text-align: center;
     color: rgb(122, 0, 75);
     padding: 1rem;
-    border-width: 1px;
-    border-style: dotted;
-    border-color: rgb(122, 0, 75);
     border-radius: 5px;
     display: grid;
 }
@@ -76,10 +73,12 @@ section {
     margin-top: 2px;
     margin-bottom: 20px;
     background-color: rgb(235, 225, 225);
+    clear: both;
     padding: 20px;
     border-radius: 5px;
     gap: 1rem;
     box-shadow: 1px 1px 3px rgb(122, 0, 75);
+    overflow: hidden;
 }
 
 a:link {
@@ -98,4 +97,19 @@ mark {
     color: rgb(133, 143, 247);
     background: none;
     font-weight: bold;
+}
+
+.block{
+    float: left;
+    list-style: none;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    border-color: rgb(200, 190, 190);
+    height: auto;
+    width: 5rem;
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem;
+    color: rgb(122, 0, 75);
 }
