@@ -40,7 +40,7 @@ nav {
 
 blockquote {
     text-align: center;
-    color: rgb(122, 0, 75);
+    color: var(--main-color);
     padding-right: 1rem;
     padding-left: 1rem;
     border-radius: 5px;
@@ -88,7 +88,7 @@ section {
     padding: 20px;
     border-radius: 5px;
     gap: 1rem;
-    box-shadow: 1px 1px 3px rgb(122, 0, 75);
+    box-shadow: 1px 1px 3px var(--main-color);
     overflow: hidden;
 }
 
@@ -105,7 +105,7 @@ a:visited {
 }
 
 mark {
-    color: rgb(133, 143, 247);
+    color: var(--highlight-text);
     background: none;
     font-weight: bold;
 }
@@ -116,11 +116,10 @@ mark {
     border-width: 1px;
     border-style: solid;
     border-radius: 3px;
-    border-color: rgb(200, 190, 190);
+    border-color: var(--page-bg-color);
     height: auto;
     width: 5rem;
     text-align: center;
     margin: 1rem;
     padding: 1rem;
-    color: rgb(122, 0, 75);
 }
