@@ -1,3 +1,11 @@
+:root {
+    --main-color: rgb(122, 0, 75);
+    --text-bg-color: rgb(235, 225, 225);
+    --page-bg-color: rgb(200, 190, 190);
+    --highlight-text: rgb(133, 143, 247);
+    --highlight-link: hotpink;
+}
+
 body {
     font-family: 'Ubuntu', 'Corbel', sans-serif;
     font-weight: 400;
@@ -5,8 +13,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10%;
-    color: rgb(122, 0, 75);
-    background-color: rgb(200, 190, 190);
+    color: var(--main-color);
+    background-color: var(--page-bg-color);
     max-width: 550px;
 }
 
@@ -20,7 +28,7 @@ h2 {
 }
 
 nav {
-    background: rgb(122, 0, 75);
+    background: var(--main-color);
     border-radius: 5px;
     text-align: right;
     padding: 1rem;
@@ -53,12 +61,12 @@ blockquote {
 
 button {
     border-style: solid;
-    border-color: rgb(235, 225, 225);
+    border-color: --text-bg-color;
     border-radius: 3px;
     padding: 5px 10px;
     text-decoration: none;
-    background-color: rgb(122, 0, 75);
-    color: rgb(235, 225, 225);
+    background-color: var(--main-color);
+    color: --text-bg-color;
     font-weight: 500;
     margin-right: 8px;
     margin-top: 4px;
@@ -67,15 +75,15 @@ button {
 
 button:hover {
     border-style: solid;
-    border-color: hotpink;
+    border-color: var(--highlight-link);
     border-radius: 3px;
-    color: hotpink;
+    color: var(--highlight-link);
 }
 
 section {
     margin-top: 2px;
     margin-bottom: 20px;
-    background-color: rgb(235, 225, 225);
+    background-color: --text-bg-color;
     clear: both;
     padding: 20px;
     border-radius: 5px;
