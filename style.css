@@ -38,6 +38,7 @@ nav {
     box-shadow: 1px 1px 3px rgb(100, 0, 60);
 }
 
+
 blockquote {
     text-align: center;
     color: var(--main-color);
@@ -54,11 +55,6 @@ blockquote {
     width: 20%;
 }
 
-.navbar {
-    display: grid;
-    color: rgb(122, 0, 75);
-}
-
 button {
     border-style: solid;
     border-color: --text-bg-color;
@@ -66,7 +62,7 @@ button {
     padding: 5px 10px;
     text-decoration: none;
     background-color: var(--main-color);
-    color: --text-bg-color;
+    color: var(--text-bg-color);
     font-weight: 500;
     margin-right: 8px;
     margin-top: 4px;
@@ -83,7 +79,7 @@ button:hover {
 section {
     margin-top: 2px;
     margin-bottom: 20px;
-    background-color: --text-bg-color;
+    background-color: var(--text-bg-color);
     clear: both;
     padding: 20px;
     border-radius: 5px;
@@ -110,7 +106,7 @@ mark {
     font-weight: bold;
 }
 
-.block{
+.block {
     float: left;
     list-style: none;
     border-width: 1px;
