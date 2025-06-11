@@ -55,6 +55,44 @@ blockquote {
     width: 20%;
 }
 
+section {
+    margin-top: 2px;
+    margin-bottom: 20px;
+    background-color: var(--text-bg-color);
+    clear: both;
+    padding: 20px;
+    border-radius: 5px;
+    gap: 1rem;
+    box-shadow: 1px 1px 3px var(--main-color);
+    overflow: hidden;
+}
+
+.block {
+    float: left;
+    list-style: none;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    border-color: var(--page-bg-color);
+    height: auto;
+    width: 5rem;
+    text-align: center;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+a:link {
+    color: hotpink;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:visited {
+    color: hotpink;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 .nav-link {
     border-style: solid;
     border-color: var(--text-bg-color);
@@ -81,46 +119,8 @@ blockquote {
     color: var(--highlight-link);
 }
 
-section {
-    margin-top: 2px;
-    margin-bottom: 20px;
-    background-color: var(--text-bg-color);
-    clear: both;
-    padding: 20px;
-    border-radius: 5px;
-    gap: 1rem;
-    box-shadow: 1px 1px 3px var(--main-color);
-    overflow: hidden;
-}
-
-a:link {
-    color: hotpink;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:visited {
-    color: hotpink;
-    text-decoration: none;
-    font-weight: bold;
-}
-
 mark {
     color: var(--highlight-text);
     background: none;
     font-weight: bold;
-}
-
-.block {
-    float: left;
-    list-style: none;
-    border-width: 1px;
-    border-style: solid;
-    border-radius: 3px;
-    border-color: var(--page-bg-color);
-    height: auto;
-    width: 5rem;
-    text-align: center;
-    margin: 1rem;
-    padding: 1rem;
 }
