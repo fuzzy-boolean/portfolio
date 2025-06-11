@@ -82,9 +82,7 @@ section {
 }
 
 a:link {
-    color: hotpink;
-    text-decoration: none;
-    font-weight: bold;
+
 }
 
 a:visited {
@@ -93,14 +91,20 @@ a:visited {
     font-weight: bold;
 }
 
+.regular-link {
+    color: hotpink;
+    text-decoration: none;
+    font-weight: bold; 
+}
+
 .nav-link {
+    color: var(--text-bg-color);
     border-style: solid;
     border-color: var(--text-bg-color);
     border-radius: 3px;
     padding: 5px 10px;
     text-decoration: none;
     background-color: var(--main-color);
-    color: var(--text-bg-color);
     font-weight: 500;
     margin-right: 8px;
     margin-top: 4px;
