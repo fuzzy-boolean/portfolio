@@ -55,9 +55,9 @@ blockquote {
     width: 20%;
 }
 
-button {
+.nav-link {
     border-style: solid;
-    border-color: --text-bg-color;
+    border-color: var(--text-bg-color);
     border-radius: 3px;
     padding: 5px 10px;
     text-decoration: none;
@@ -69,7 +69,12 @@ button {
     margin-bottom: 4px;
 }
 
-button:hover {
+.nav-link:visited {
+    border-color: var(--text-bg-color);
+    color: var(--text-bg-color);
+}
+
+.nav-link:hover {
     border-style: solid;
     border-color: var(--highlight-link);
     border-radius: 3px;
