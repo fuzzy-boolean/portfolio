@@ -57,7 +57,7 @@ blockquote {
 
 section {
     margin-top: 2px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     background-color: var(--text-bg-color);
     clear: both;
     padding: 20px;
@@ -75,9 +75,11 @@ section {
     border-radius: 3px;
     border-color: var(--page-bg-color);
     height: auto;
-    width: 5rem;
+    width: auto;
+    max-width: 25%;
+    min-width: 5rem;
     text-align: center;
-    margin: 1rem;
+    margin: 0.5rem;
     padding: 1rem;
 }
 
