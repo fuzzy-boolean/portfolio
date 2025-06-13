@@ -29,12 +29,27 @@
     <main>
         <section id="skills">
             <h2><a href=#home class="regular-link">⇈</a> Skills</h2>
-            <ul>
-                <li class="block">Python</li>
-                <li class="block">Javascript</li>
-                <li class="block">HTML</li>
-                <li class="block">CSS</li>
-                <li class="block">LaTeX</li>
+            <ul class="flex-container">
+                <li class="flex-item">
+                    <h4>Python</h4>
+                    <p>since 2023</p>
+                </li>
+                <li class="flex-item">
+                    <h4>Javascript</h4>
+                    <p>just started</p>
+                </li>
+                <li class="flex-item">
+                    <h4>HTML</h4>
+                    <p>started with v4.1</p>
+                </li>
+                <li class="flex-item">
+                    <h4>CSS</h4>
+                    <p>since 2023</p>
+                </li>
+                <li class="flex-item">
+                    <h4>LaTeX</h4>
+                    <p>since around 2015</p>
+                </li>
             </ul>
         </section>
 
@@ -75,8 +90,29 @@
 
         <section id="contact">
             <h2><a href=#home class="regular-link">⇈</a> Contact</h2>
-            <p>Contact me on <a href="https://github.com/fuzzy-boolean" class="regular-link">GitHub</a>!</li>
+            <p>
+                Contact me on <a href="https://github.com/fuzzy-boolean" class="regular-link">GitHub</a>! .. Or don't
+                use
+                this dysfunctional form:
             </p>
+            <form>
+                <label for="email">Your Email: </label>
+                <input type="email" name="email" id="email">
+                <fieldset>
+                    <legend>What do you need?</legend>
+
+                    <input type="radio" name="wish" value="wish1" id="wish1">
+                    <label for="wish1">A Website</label><br>
+
+                    <input type="radio" name="wish" value="wish2" id="wish2">
+                    <label for="wish2">Something else</label>
+                </fieldset>
+                <input type="button" name="send" id="send">
+            </form>
+            <details>
+            <summary>Disclamer</summary>
+            <p>this does not work yet.</p>
+            </details>
         </section>
 
     </main>
