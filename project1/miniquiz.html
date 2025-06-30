@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Simple Quiz</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                max-width: 600px;
+                margin: 50px auto;
+                padding: 20px;
+            }
+            .question {
+                margin: 20px 0;
+                padding: 15px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
+            button {
+                margin: 5px;
+                padding: 10px 15px;
+                cursor: pointer;
+            }
+            .correct {
+                background-color: #d4edda;
+            }
+            .incorrect {
+                background-color: #f8d7da;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JavaScript Quiz</h1>
+        <div id="quiz-container">
+            <div id="question-1" class="question">
+                <p><strong>Question 1:</strong> What does HTML stand for?</p>
+                <button onclick="checkAnswer(1, 'correct')">
+                    HyperText Markup Language
+                </button>
+                <button onclick="checkAnswer(1, 'wrong')">
+                    Home Tool Markup Language
+                </button>
+                <button onclick="checkAnswer(1, 'wrong')">
+                    Hyperlinks and Text Markup Language
+                </button>
+            </div>
+
+            <div id="question-2" class="question">
+                <p>
+                    <strong>Question 2:</strong> Which symbol is used for
+                    comments in JavaScript?
+                </p>
+                <button onclick="checkAnswer(2, 'wrong')">#</button>
+                <button onclick="checkAnswer(2, 'correct')">//</button>
+                <button onclick="checkAnswer(2, 'wrong')">/* */</button>
+            </div>
+
+            <!-- Add more questions here -->
+        </div>
+
+        <div id="results" style="display: none">
+            <h2>Quiz Complete!</h2>
+            <p id="score-display"></p>
+            <p id="grade-message"></p>
+            <button onclick="resetQuiz()">Take Quiz Again</button>
+        </div>
+
+        <script>
+            let score = 0;
+            let questionsAnswered = 0;
+            const totalQuestions = 2; // Update this as you add questions
+
+            function checkAnswer(questionNum, answerType) {
+                // Your conditional logic goes here
+                // Check if answer is correct
+                if (answerType === "correct") {
+                    // Update score
+                    score += 1;
+                    // Provide feedback
+                    event.target.classList.add(".correct");
+
+                    // Check if quiz is complete
+                }
+            }
+
+            function showResults() {
+                // Calculate final grade
+                // Display results with conditional messages
+            }
+
+            function resetQuiz() {
+                // Reset game state
+            }
+        </script>
+    </body>
+</html>
