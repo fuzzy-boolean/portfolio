@@ -34,13 +34,13 @@
         <div id="quiz-container">
             <div id="question-1" class="question">
                 <p><strong>Question 1:</strong> What does HTML stand for?</p>
-                <button onclick="checkAnswer(1, 'correct')">
+                <button id="btn1.1" onclick="checkAnswer(1, 1, 'correct')">
                     HyperText Markup Language
                 </button>
-                <button onclick="checkAnswer(1, 'wrong')">
+                <button id="btn1.2" onclick="checkAnswer(1, 2, 'wrong')">
                     Home Tool Markup Language
                 </button>
-                <button onclick="checkAnswer(1, 'wrong')">
+                <button id="btn1.3" onclick="checkAnswer(1, 2, 'wrong')">
                     Hyperlinks and Text Markup Language
                 </button>
             </div>
@@ -50,9 +50,9 @@
                     <strong>Question 2:</strong> Which symbol is used for
                     comments in JavaScript?
                 </p>
-                <button onclick="checkAnswer(2, 'wrong')">#</button>
-                <button onclick="checkAnswer(2, 'correct')">//</button>
-                <button onclick="checkAnswer(2, 'wrong')">/* */</button>
+                <button id="btn2.1" onclick="checkAnswer(2, 'wrong')">#</button>
+                <button id="btn2.2" onclick="checkAnswer(2, 'correct')">//</button>
+                <button id="btn2.3" onclick="checkAnswer(2, 'wrong')">/* */</button>
             </div>
 
             <!-- Add more questions here -->
@@ -69,15 +69,16 @@
             let score = 0;
             let questionsAnswered = 0;
             const totalQuestions = 2; // Update this as you add questions
-
-            function checkAnswer(questionNum, answerType) {
+           /// const event.getElementById("").addClassList(); 
+            
+            function checkAnswer(questionNum, answerNum, answerType) {
                 // Your conditional logic goes here
                 // Check if answer is correct
                 if (answerType === "correct") {
                     // Update score
                     score += 1;
                     // Provide feedback
-                    event.target.classList.add(".correct");
+                    event.getElementByID("btn${questionNum}.${answerNum}").addClassList(".correct");
 
                     // Check if quiz is complete
                 }
