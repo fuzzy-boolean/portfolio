@@ -1,101 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Simple Quiz</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        max-width: 600px;
-        margin: 50px auto;
-        padding: 20px;
-      }
-      .question {
-        margin: 20px 0;
-        padding: 15px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-      }
-      button {
-        margin: 5px;
-        padding: 10px 15px;
-        cursor: pointer;
-      }
-      .correct {
-        background-color: #d4edda;
-      }
-      .incorrect {
-        background-color: #f8d7da;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>JavaScript Quiz</h1>
-    <div id="quiz-container">
-      <div id="question-1" class="question">
-        <p><strong>Question 1:</strong> What does HTML stand for?</p>
-        <button id="btn1.1" onclick="checkAnswer('1', '1', 'correct')">
-          HyperText Markup Language
-        </button>
-        <button id="btn1.2" onclick="checkAnswer('1', '2', 'wrong')">
-          Home Tool Markup Language
-        </button>
-        <button id="btn1.3" onclick="checkAnswer('1', '3', 'wrong')">
-          Hyperlinks and Text Markup Language
-        </button>
-      </div>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Simple Quiz</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                max-width: 600px;
+                margin: 50px auto;
+                padding: 20px;
+            }
+            .question {
+                margin: 20px 0;
+                padding: 15px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
+            button {
+                margin: 5px;
+                padding: 10px 15px;
+                cursor: pointer;
+            }
+            .correct {
+                background-color: #d4edda;
+            }
+            .incorrect {
+                background-color: #f8d7da;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JavaScript Quiz</h1>
+        <div id="quiz-container">
+            <div id="question-1" class="question">
+                <p><strong>Question 1:</strong> What does HTML stand for?</p>
+                <button id="btn1.1" onclick="checkAnswer('1', '1', 'correct')">
+                    HyperText Markup Language
+                </button>
+                <button id="btn1.2" onclick="checkAnswer('1', '2', 'wrong')">
+                    Home Tool Markup Language
+                </button>
+                <button id="btn1.3" onclick="checkAnswer('1', '3', 'wrong')">
+                    Hyperlinks and Text Markup Language
+                </button>
+            </div>
 
-      <div id="question-2" class="question">
-        <p>
-          <strong>Question 2:</strong> Which symbol is used for comments in
-          JavaScript?
-        </p>
-        <button id="btn2.1" onclick="checkAnswer(2, 1, 'wrong')">#</button>
-        <button id="btn2.2" onclick="checkAnswer(2, 2, 'correct')">//</button>
-        <button id="btn2.3" onclick="checkAnswer(2, 3, 'wrong')">/* */</button>
-      </div>
+            <div id="question-2" class="question">
+                <p>
+                    <strong>Question 2:</strong> Which symbol is used for
+                    comments in JavaScript?
+                </p>
+                <button id="btn2.1" onclick="checkAnswer(2, 1, 'wrong')">
+                    #
+                </button>
+                <button id="btn2.2" onclick="checkAnswer(2, 2, 'correct')">
+                    //
+                </button>
+                <button id="btn2.3" onclick="checkAnswer(2, 3, 'wrong')">
+                    /* */
+                </button>
+            </div>
 
-      <!-- Add more questions here -->
-    </div>
+            <!-- Add more questions here -->
+        </div>
 
-    <div id="results" style="display: none">
-      <h2>Quiz Complete!</h2>
-      <p id="score-display"></p>
-      <p id="grade-message"></p>
-      <button onclick="resetQuiz()">Take Quiz Again</button>
-    </div>
+        <div id="results" style="display: none">
+            <h2>Quiz Complete!</h2>
+            <p id="score-display"></p>
+            <p id="grade-message"></p>
+            <button onclick="resetQuiz()">Take Quiz Again</button>
+        </div>
 
-    <script>
-      let score = 0;
-      let questionsAnswered = 0;
-      const totalQuestions = 2; // Update this as you add questions
-      // const event.getElementById("").addClassList();
+        <script>
+            let score = 0;
+            let questionsAnswered = 0;
+            const totalQuestions = 2; // Update this as you add questions
+            // const event.getElementById("").addClassList();
 
-      function checkAnswer(questionNum, answerNum, answerType) {
-        // Your conditional logic goes here
-        // Check if answer is correct
-        let btn = document.getElementById(`btn${questionNum}.${answerNum}`);
-        if (answerType === "correct") {
-          score += 1;
-          // Provide feedback
-          //alert(`question ${questionNum}.${answerNum} was correctly answered`);
-          btn.style.backgroundColor = "green";
-          //console.log(btn);
-          // Check if quiz is complete
-        } else if (answerType === "wrong") {
-          //alert(`question ${questionNum}.${answerNum} was wrongly answered`);
-          btn.style.backgroundColor = "red";
-        }
-      }
+            function checkAnswer(questionNum, answerNum, answerType) {
+                // Your conditional logic goes here
+                // Check if answer is correct
+                let btn = document.getElementById(
+                    `btn${questionNum}.${answerNum}`
+                );
+                let qstn = document.getElementById(`question-${questionNum}`);
+                if (answerType === "correct") {
+                    score += 1;
+                    // Provide feedback
+                    //alert(`question ${questionNum}.${answerNum} was correctly answered`);
+                    btn.style.backgroundColor = "green";
+                    qstn.style.backgroundColor = "lightgreen";
+                    //console.log(btn);
+                    // Check if quiz is complete
+                } else if (answerType === "wrong") {
+                    //alert(`question ${questionNum}.${answerNum} was wrongly answered`);
+                    btn.style.backgroundColor = "red";
+                    qstn.style.backgroundColor = "lightpink";
+                }
+            }
 
-      function showResults() {
-        // Calculate final grade
-        // Display results with conditional messages
-      }
+            function showResults() {
+                // Calculate final grade
+                // Display results with conditional messages
+            }
 
-      function resetQuiz() {
-        // Reset game state
-      }
-    </script>
-  </body>
+            function resetQuiz() {
+                // Reset game state
+            }
+        </script>
+    </body>
 </html>
