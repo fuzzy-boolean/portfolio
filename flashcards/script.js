@@ -1,22 +1,31 @@
 let exampleCards = [
     {
         ID: 1,
-        front: "lingua",
-        back: "language",
+        content: {
+            front: "lingua",
+            back: "language",
+            phrases: ["lingua latina lingua mortua non est."],
+        },
         tags: ["latin", "vocab"],
         rating: 0,
     },
     {
         ID: 2,
-        front: "język",
-        back: "language",
+        content: {
+            front: "język",
+            back: "language",
+            phrases: ["Lubię uczyć się języków obcych."],
+        },
         tags: ["polish", "vocab"],
         rating: 0,
     },
     {
         ID: 3,
-        front: "Syntax of a for-loop in JS",
-        back: "<code>for ('1. initialize';'2. conditional'; '3. increment') {code} <br>Expressions 1 and 3 are optional.</code>",
+        conten: {
+            front: "Syntax of a for-loop in JS",
+            back: "<code>for ('1. initialize';'2. conditional'; '3. increment') {code;}</code>",
+            remarks: "Expressions 1 and 3 are optional.",
+        },
         tags: ["JS", "coding"],
         rating: 0,
     },
