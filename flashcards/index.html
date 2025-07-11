@@ -6,19 +6,34 @@
         <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
     <body>
-        <h1>FlashCards</h1>
-
-        <button>start test</button>
-        <button>stop test</button>
-        <section class="gamebox">
-            <section class="displaybox">
-                <p>cards will show up here</p>
+        <header>
+            <h1>FlashCards</h1>
+            <button>Start Test!</button>
+            <button>Card Editor</button>
+        </header>
+        <main>
+            <section class="gamebox">
+                <p>Do you remember this?</p>
+                <section class="displaybox">
+                    <div class="flex-container">
+                        <div class="flex-item" id="card-front">
+                            <p>C'est choutte!</p>
+                        </div>
+                        <div class="flex-item-divider">➡️</div>
+                        <div class="flex-item" id="card-back">
+                            <p>هذا رائع</p>
+                        </div>
+                    </div>
+                </section>
                 <p>
                     <button>show!</button> <button>forgot!</button>
                     <button>remembered!</button>
                 </p>
             </section>
-        </section>
+        </main>
+        <footer>
+            <p>This is a project from learners for learners!</p>
+        </footer>
 
         <!-- <script src="script.js"></script> -->
     </body>

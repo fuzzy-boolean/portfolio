@@ -9,3 +9,56 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+.gamebox {
+    border-style: solid;
+    border-width: 1px;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.displaybox {
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.flex-container {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    margin: 0;
+    padding-left: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-item {
+    float: left;
+    list-style: none;
+    border-width: 1px;
+    border-style: solid;
+    max-width: 50%;
+    width: 30%;
+    min-height: 7rem;
+    text-align: center;
+    align-content: center;
+    padding: 1rem;
+    margin: 1%;
+    font-size: 1.5rem;
+}
+
+.flex-item-divider {
+    float: left;
+    list-style: none;
+    border-width: 1px;
+    border-style: none;
+    min-height: 6rem;
+    text-align: center;
+    align-content: center;
+    padding: 1rem;
+    margin: 1%;
+    font-size: 1.5rem;
+}
