@@ -1,9 +1,10 @@
+let counter = 0;
 let exampleCards = [
     {
         ID: 1,
         content: {
             front: "lingua",
-            back: "language",
+            back: "language in latin",
             phrases: ["lingua latina lingua mortua non est."],
         },
         tags: ["latin", "vocab"],
@@ -13,7 +14,7 @@ let exampleCards = [
         ID: 2,
         content: {
             front: "język",
-            back: "language",
+            back: "language in polish",
             phrases: ["Lubię uczyć się języków obcych."],
         },
         tags: ["polish", "vocab"],
@@ -21,9 +22,9 @@ let exampleCards = [
     },
     {
         ID: 3,
-        conten: {
-            front: "Syntax of a for-loop in JS",
-            back: "<code>for ('1. initialize';'2. conditional'; '3. increment') {code;}</code>",
+        content: {
+            front: "declare an Array",
+            back: "arr = [1, 2]",
             remarks: "Expressions 1 and 3 are optional.",
         },
         tags: ["JS", "coding"],
@@ -31,6 +32,38 @@ let exampleCards = [
     },
 ];
 
+function displayCurrentCard() {
+    card = exampleCards[counter];
+    document.getElementById("card-front").textContent = card.content.front;
+    document.getElementById("card-back").textContent = "?";
+}
+
+function displayBack() {
+    document.getElementById("card-back").textContent =
+        exampleCards[counter].content.back;
+}
+
+//// BUTTONS! ////
+
+document.getElementById("remembered").addEventListener("click", function () {
+    counter = (counter + 1) % exampleCards.length;
+    exampleCards[counter].rating++;
+    displayCurrentCard();
+});
+
+document.getElementById("forgotten").addEventListener("click", function () {
+    counter = (counter + 1) % exampleCards.length;
+    exampleCards[counter].rating--;
+    displayCurrentCard();
+});
+
+document.getElementById("show").addEventListener("click", function () {
+    displayBack();
+});
+
+displayCurrentCard();
+
+/*
 for (let c of exampleCards) {
     console.log(c);
     const answer = prompt(
@@ -49,3 +82,4 @@ for (let c of exampleCards) {
         break;
     }
 }
+*/
