@@ -36,6 +36,15 @@ function displayCurrentCard() {
     card = exampleCards[counter];
     document.getElementById("card-front").textContent = card.content.front;
     document.getElementById("card-back").textContent = "?";
+
+    // changes color of front-frame depending on rating. as a simple feedback
+    if (card.rating > 2) {
+        document.getElementById("card-front").style.borderColor = "green";
+    } else if (card.rating < -2) {
+        document.getElementById("card-front").style.borderColor = "red";
+    } else {
+        document.getElementById("card-front").style.borderColor = "yellow";
+    }
 }
 
 function displayBack() {
@@ -63,6 +72,7 @@ document.getElementById("show").addEventListener("click", function () {
 
 displayCurrentCard();
 
+//// Old and not needed! ////
 /*
 for (let c of exampleCards) {
     console.log(c);
