@@ -1,6 +1,19 @@
 # plans
 
-## data structure
+## Exchange (other plattforms)
+
+Should be interoperable with the Big players like:
+
+-   Anki
+-   Quizlet
+
+For Data-Exchange these use a text format where term and definition (front and back) are separated by TAB like in `anki-quizlet.txt`
+
+Research on Scholarsome, a FOSS-Project, would be good:
+[scholarsome](https://scholarsome.com/),
+[announcement on reddit.](https://www.reddit.com/r/opensource/comments/14azw6d/an_open_source_flashcard_studying_system/)
+
+## Native data structure
 
 Cards should be wildly customizable while also used easy to use out of the box.
 
@@ -10,7 +23,7 @@ The start of a Database should specify the content and give Meta-Info
 -   Title
 -   Scource (e.g. a repository)
 -   License
--   Content description: a Format Specifig target language (or topic) and base language using ISO codes (e.G. "lang:de>fr", "lang:SQL>en"(custom "zoology:")??)
+-   Content description: a Format specifiying target language (or topic) and base language using ISO codes (e.G. "lang:de>fr", "lang:SQL>en"(custom "zoology:")??)
 
 ### Properties of a card-object
 
