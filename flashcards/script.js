@@ -30,6 +30,16 @@ let exampleCards = [
         tags: ["JS", "coding"],
         rating: 0,
     },
+    {
+        ID: 4,
+        content: {
+            front: "C'est chouette!",
+            back: "هذا رائع",
+            phrases: ["هذا رائع"],
+        },
+        tags: ["french", "phrases"],
+        rating: 0,
+    },
 ];
 
 function displayCurrentCard() {
